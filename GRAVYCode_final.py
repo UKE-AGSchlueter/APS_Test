@@ -25,7 +25,7 @@ biased values.
 '''
 #update you file paths here
 
-file_path = "C:/Users/agock/Desktop/Eppendorf_LB.xlsx"
+file_path = "C:/Users/agock/Desktop/Input_file.xlsx"
 directory = os.path.dirname(file_path)
 base_name = os.path.basename(file_path)
 
