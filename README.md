@@ -40,9 +40,9 @@ In the final graph the charge state of the adsorbed and not adsorbed peptides is
 <img width="418" alt="image" src="https://github.com/UKE-AGSchlueter/APS_Test/assets/139353397/4b8b5a0b-05fa-4592-8ffa-edd78f54ccf5">
 
 ## License
-This codeis published under the GPLv3.0 License.
+This code is published under the GPLv3.0 License.
 
-##Reference
-If you use this skript for your research, please cite our mnuscript:
+## Reference
+If you use this skript for your research, please cite our manuscript:
 
 
