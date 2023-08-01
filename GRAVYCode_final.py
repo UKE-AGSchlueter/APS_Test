@@ -24,10 +24,19 @@ log2 transformed values. No normalisation should be applied as this can lead to
 biased values.
 '''
 #update you file paths here
+
+file_path = "C:/Users/agock/Desktop/Eppendorf_LB.xlsx"
+directory = os.path.dirname(file_path)
+base_name = os.path.basename(file_path)
+
+# Split the file name and its extension
+base_name, extension = os.path.splitext(base_name)
+
 try:
-  data = pd.read_excel('C:/Users/agock/Desktop/Eppendorf_LB.xlsx')
+  data = pd.read_excel(file_path)
 except IOError as err:
   sys.stderr.write ( '{}\n'. format(err)) 
+
 
 def calculate_gravy_number(peptide):
     # Calculate GRAVY (grand average of hydropathy) number
@@ -47,15 +56,13 @@ def calculate_charge(peptide, ph=2.7):
     charge = sum(aa_charge.get(aa, 0) for aa in peptide) + 1 #For N-terminus
     return charge
 
-file_path = "C:/Users/agock/Desktop/"
-directory = os.path.dirname(file_path)
-
 # Separate the groups
 group_1_columns = [col for col in data.columns if col.startswith("1_")]
 group_2_columns = [col for col in data.columns if col.startswith("2_")]
 
 if not is_numeric_dtype(group_1_columns) & is_numeric_dtype(group_2_columns):
     sys.stderr.write('Input data frame contains non-numeric values \n') 
+
 # Extract peptides
 peptides = data["Peptides"]
 
@@ -92,8 +99,10 @@ results_df = pd.DataFrame({
     'Charge State': peptide_charges
 })
     
+
 # Save the DataFrame as an Excel file
-output_file_path_excel = os.path.join(directory, 'APS_Test_Results.xlsx')
+output_file_excel = base_name + "_APS" + extension
+output_file_path_excel = os.path.join(directory, output_file_excel)
 results_df.to_excel(output_file_path_excel, index=False)
 print(f"Results saved to: {output_file_path_excel}")
 
@@ -191,9 +200,9 @@ plt.tight_layout()
 plt.show()
 
 # Save the plot as a PDF in the same directory as results_df
-output_file_path_pdf = os.path.join(directory, 'APS_Test_Results_Plot.pdf')
+output_file_pdf = base_name + "_APS.pdf"
+output_file_path_pdf = os.path.join(directory, output_file_pdf)
 plt.savefig(output_file_path_pdf, format='pdf')
-
 print(f"Plot saved as {output_file_path_pdf}")
 
 
