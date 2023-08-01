@@ -4,7 +4,7 @@ Not only the number of significantly differentially adsorbed peptides, also the 
 
 ## Users Guide
 This script can be run under every IDE (integrated development environment), for example "Spyder" which is available under the anaconda distribution. 
-After downloading the script you can open it using your preferred IDE and adjust the file paths in lines 28 and 32. 
+After downloading the script you can open it using your preferred IDE and adjust the file path in line 28. 
 
 ### Input file
 Your input file needs to be an excel file, including a column for your peptides and your two groups which should be marked with a "1_" and a "2_" in front of the column names.
@@ -39,5 +39,10 @@ In the final graph the charge state of the adsorbed and not adsorbed peptides is
 
 <img width="418" alt="image" src="https://github.com/UKE-AGSchlueter/APS_Test/assets/139353397/4b8b5a0b-05fa-4592-8ffa-edd78f54ccf5">
 
+## License
+This codeis published under the GPLv3.0 License.
+
+##Reference
+If you use this skript for your research, please cite our mnuscript:
 
 
