@@ -1,4 +1,4 @@
-# Adsorbed-Peptides
+# Adsorbed Peptides
 Analytes during their journey from their natural sources to their identification and quantification are prone to adsorption to surfaces before they enter an analytical instrument, causing false quantities. This problem is especially severe in diverse omics. Here, thousands of analytes with a broad range of chemical properties and thus different affinities to surfaces are quantified within a single analytical run. For quantifying adsorption effects caused by surfaces of sample handling tools, an assay was developed, applying LC-MS/MS-based differential bottom-up proteomics and as probe a reference mixture of thousands of tryptic peptides, covering a broad range of chemical properties. To investigate what kind of peptides are adsorbed this script was developed.
 Not only the number of significantly differentially adsorbed peptides, also the charge state, length and GRAVY (grand average of hydropathy) Score is calculated and visualised.
 
@@ -7,7 +7,7 @@ This script can be run under every IDE (integrated development environment), for
 After downloading the script you can open it using your preferred IDE and adjust the file path in line 28. 
 
 ### Input file
-Your input file needs to be an excel file, including a column for your peptides and your two groups which should be marked with a "1_" and a "2_" in front of the column names.
+Your input file needs to be an excel file, including a column for your peptides and your two groups which should be marked with a "1_" and a "2_" in front of the column names. Peptide abundances should be log2 transfomed and the matrix should not contain missing values.
 |Peptides	|1_Sample_Name|2_Sample_Name|1_Sample_Name|2_Sample_Name|1_Sample_Name|1_Sample_Name|
 |---------|-------------|-------------|-------------|-------------|-------------|-------------|
 |Peptide1 |	    18.66   |	    18.3164 |	    18.617  |	    18.101  |	    18.3899 |	    18.215  |
